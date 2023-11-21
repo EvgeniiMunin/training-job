@@ -16,7 +16,7 @@ def upload_data_to_s3(s3_bucket: str, local_path: str, s3_path: str, endpoint_ur
     s3 = client("s3", endpoint_url=endpoint_url)
     s3.upload_file(local_path, s3_bucket, s3_path)
 
-
+# entry point
 @click.command()
 @click.option("--dataset-path", "-d", required=True)
 @click.option("--output-path", "-o", required=True)
